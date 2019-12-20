@@ -1,7 +1,7 @@
 # File Specification
 Original data is saved in Data folder
 
-3 Jupyter Notebook:
+3 Jupyter Notebooks:
 - Data cleaning process
 - Kossinets & Watts Model
 - Community detection
