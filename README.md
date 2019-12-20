@@ -33,13 +33,13 @@ Applying the Louvain algorithm in the StackOverflow dataset, it could be found t
 
 After community detection, we then analysed whether and how much the ties formed between nodes are affected by the communities they are in. We propose an algorithm to study the relationship between edge density of the community and the ratio of in-community ties, and the relationship between the size of community and the ratio of in-community ties, where,
 
-**Edge density** = ties in community/potential ties in community
+- **Edge density** = ties in community/potential ties in community
 
-**In-community ties**: we deem a tie as in-community tie if both users (source node and target node) are from the same community. 
+- **In-community ties**: we deem a tie as in-community tie if both users (source node and target node) are from the same community. 
 
-**Out-community ties**: we deem a tie as out-community tie if users (source node and target node) are not from the same community
+- **Out-community ties**: we deem a tie as out-community tie if users (source node and target node) are not from the same community
 
-**In-community ties ratio of a community** = in-community ties of a community / in-community ties of a community + out-community ties of a community
+- **In-community ties ratio of a community** = in-community ties of a community / in-community ties of a community + out-community ties of a community
 
 <img src="/images/IMG_0220.jpg" alt="IMG_0220"
  title="IMG_0220" width="450" />
