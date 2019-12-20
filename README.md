@@ -86,10 +86,13 @@ In conclusion, users from a community with more members and less density are mor
 2. We assumed the communities of the network are non-overlapping. The insight is constrained by the assumption. 
 
 # Reference
+Blondel, V.D., Guilaume, J., Lambiotte, R. and Lefebvre, E., Fast unfolding of communities in large networks, Journal of Statistical Mechanics: Theory and Experiment [online]. 2008(10) p10008.[Viewed 18 December 2019].Available from: doi:10.1088/1742-5468/2008/10/p10008
+
 Derek, G., Donal, D. and Padraig, C. (2010), Tracking the Evolution of Communities in Dynamic Social Networks, Proceedings of the 2010 International Conference on Advances in Social Networks Analysis and Mining, p.176-183
 
 Haynes,J. and Perisic,I. (2010) Mapping search relevance to social networks. Proceedings of the 3rd Workshop on Social Network Mining and Analysis, SNAKDD, pp.11-20
 
 Pujol, JM., Erramilli, V., Rodriguez, P. (2009) Divide and conquer: partitioning online social networks. CoRR abs/0905.4918
+
 
 
