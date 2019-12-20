@@ -60,7 +60,7 @@ In conclusion, the probability for 2 nodes to connect is positively correlated t
 
 ## Community
 <img src="/images/community.png" alt="community"
- title="community" width="450" />
+ title="community" width="2000" />
  
  After determining the community of each individual user and calculating the edge density of each community, we plotted 2 graphs to illustrate:
  
