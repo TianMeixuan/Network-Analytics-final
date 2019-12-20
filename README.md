@@ -1,4 +1,13 @@
 # File Specification
+Original data is saved in Data folder
+3 Jupyter Notebook:
+- Data cleaning process
+- Kossinets & Watts Model
+- Community detection
+
+In order to run the code in Community detection, please install cdlib using 'pip install cdlib'
+
+
 # Executive Summary
 In order to build some insight about “ Why do users participate in certain threads ”, we tried to approach the question from two aspects - namely the number of shared connections that 2 users have and the communities as well as the attributes of the communities that they belong to. 
 # Network Analytics Pipeline
