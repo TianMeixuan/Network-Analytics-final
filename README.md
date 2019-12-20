@@ -79,3 +79,9 @@ A negative correlation between edge density and ratio of in-community ties could
 The plot on the right shows a positive correlation between the size of community and the ratio of in-community ties. It could be found that communities with more members tend to have higher ratio of in-community ties. It could be interpreted that users from a community with more members are more likely to connect with other users from the same community. 
 
 In conclusion, users from a community with more members and less density are more likely to connect with someone from the same community through the information exchange network of StackOverflow. As the data only covers the first 4 weeks of StackOverflow, it is reasonable to suspect that the questions and answers posted in StackOverflow are still limited. Users from a more densely connected community with relatively smaller number of members are more likely to explore outside its community and connect with users from other communities, as the resources (questions and answers) for their community may not be sufficient enough. In contrast, users from a less densely connected community with relatively higher number of members are more likely to connect with someone from the same community, as the community have relatively more resources (questions and answers). 
+
+# Limitation
+1. We only studied the first four weeks of the dataset and only answer to questions dataset is considered. Therefore, the result is restrained by the limited scope of data. 
+2. We assumed the communities of the network are non-overlapping. The insight is constrained by the assumption. 
+
+# Reference
