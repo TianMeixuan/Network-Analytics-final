@@ -4,9 +4,9 @@ In order to build some insight about “ Why do users participate in certain thr
 # Network Analytics Pipeline
 ## Scope of Data
 SNAP dump of StackOverflow temporal network is used for the network analysis. There are only 3 columns in the SNAP data, namely:
-SRC: id of the source node (a user)
-TGT: id of the target node (a user)
-UNIXTS: Unix timestamp (seconds since the epoch)
+- SRC: id of the source node (a user)
+- TGT: id of the target node (a user)
+- UNIXTS: Unix timestamp (seconds since the epoch)
 
 In order to conduct an analysis about the most fundamental elements of the network, we only considered answer to questions (A2Q) data as we believe A2Q successfully compressed a two-mode network between user and questions to an one-mode network. The A2Q data can also be used to extract community information, which is essential for us to conduct analyses about the research question. The comments to questions and comments to answers dataset track the activity within the interpersonal networks in StackOverflow. Thus, the two datasets are not included in this project. 
 
@@ -21,24 +21,25 @@ We applied the Kossinets & Watts Model to the A2Q data to understand the probabi
 We want to use the community detection to understand the community formation in the first 4 weeks and get an insight of how different users from different communities with different sizes and edge densities build connections in the information exchange network. In order to gain a big picture about the information detection community in the 4 week, we deem an undirected tie between the two nodes if one answered question posted by another. Again, as the information exchange network is hard to measure,  we assume that only one tie can emerge between two users no matter how many times they exchange information. To illustrate, if A answered B’s question in week 1 and B answered A’s question 3 times in week 3, we assume there is only one tie between A and B. Duplications are removed from the original dataset and only unique ties are considered for community detection and further analyses. We also used function(.to_undirected()) in Networkx to make sure the network is undirected before use the network for community detection and further analyses.
 
 Louvain algorithm is chosen for detecting communities, which are non-overlapping. Louvain method is an algorithm of community detection to optimize modularity, which is a value that measures the density of edges inside communities to edges outside communities. Networks with higher modularity would have denser connections between the nodes within the community than that in different communities.
+
 Reasons underlying the algorithm choice:
-1. The Louvain method is a simple method for detecting communities and we can implement it easily in Networkx and CDLIB packages in python. For detecting the StackOverflow communities in the first 4 weeks, we use Louvain algorithm in CDLIB packages, and its code and call is available at Github (Rossetti, 2019).
-2. It is suitable for large networks.  Many large networks were detected by this algorithm, such as Twitter social network (Josep, Vijay and Pablo, 2009), Linkedin social network (Jonathan and Igor, 2009) and mobile phone social network (Greene, Doyle and Cunningham, 2010).
-3. Comparing to the other modularity optimization community detection algorithms, the Louvain algorithm is more efficient and has higher speed run codes for a typical network of 2 million nodes only takes 2 minutes on a standard PC. (Blondel et al., 2008)
+- The Louvain method is a simple method for detecting communities and we can implement it easily in Networkx and CDLIB packages in python. For detecting the StackOverflow communities in the first 4 weeks, we use Louvain algorithm in CDLIB packages, and its code and call is available at Github (Rossetti, 2019).
+- It is suitable for large networks.  Many large networks were detected by this algorithm, such as Twitter social network (Josep, Vijay and Pablo, 2009), Linkedin social network (Jonathan and Igor, 2009) and mobile phone social network (Greene, Doyle and Cunningham, 2010).
+- Comparing to the other modularity optimization community detection algorithms, the Louvain algorithm is more efficient and has higher speed run codes for a typical network of 2 million nodes only takes 2 minutes on a standard PC. (Blondel et al., 2008)
  
 Applying the Louvain algorithm in the StackOverflow dataset, it could be found that there are 11 communities in the first 4 weeks, where the largest community has 310 nodes but the smallest communities only has 2 nodes, which may be a bias in the calculation of the algorithm. Therefore, we only considered the largest 9 communities for further analyses. 
 
-Analysis of community detection:
+**Analysis of community detection:**
 
 After community detection, we then analysed whether and how much the ties formed between nodes are affected by the communities they are in. We propose an algorithm to study the relationship between edge density of the community and the ratio of in-community ties, and the relationship between the size of community and the ratio of in-community ties, where,
 
-Edge density = ties in community/potential ties in community
+**Edge density** = ties in community/potential ties in community
 
-In-community ties: we deem a tie as in-community tie if both users (source node and target node) are from the same community. 
+**In-community ties**: we deem a tie as in-community tie if both users (source node and target node) are from the same community. 
 
-Out-community ties: we deem a tie as out-community tie if users (source node and target node) are not from the same community
+**Out-community ties**: we deem a tie as out-community tie if users (source node and target node) are not from the same community
 
-In-community ties ratio of a community = in-community ties of a community / in-community ties of a community + out-community ties of a community
+**In-community ties ratio of a community** = in-community ties of a community / in-community ties of a community + out-community ties of a community
 
 <img src="/images/IMG_0220.jpg" alt="IMG_0220"
  title="IMG_0220" width="450" />
@@ -67,7 +68,7 @@ In conclusion, the probability for 2 nodes to connect is positively correlated t
 <img src="/images/community.png" alt="community"
  title="community" width="2200" />
  
- After determining the community of each individual user and calculating the edge density of each community, we plotted 2 graphs to illustrate:
+After determining the community of each individual user and calculating the edge density of each community, we plotted 2 graphs to illustrate:
  
 1. The relationship between edge density of the community and ratio of  in-community ties 
 2. The relationship between edge community size and ratio of in-community ties
