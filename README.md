@@ -50,9 +50,14 @@ To illustrate the proposed algorithm, we detect the community of a network where
 
 Although the maximum number of shared nodes between two nodes in the data set is 23, it seems like there is a knot in the distribution around k = 14. Therefore, we used k=14 as the cutoff point and visualized the probability to connect and number of shared nodes. According to figure (1), it is much more likely for 2 nodes to connect in week 1 compared with the following weeks when the number of shared nodes is the same. The probability for 2 nodes with 8 and 10 shared nodes to connect in week 1 is 100%, however, the credibility of the data may be restrained by the size of the analyses. For week 2 and onwards, despite that there is a higher probability for 2 nodes to connect in week 2 up to week 10, the differences in probability of connection are not obvious. It could also be noticed that when k>=7, no obvious pattern between probability to connect and number of shared nodes can be found, therefore, another plot focusing on k<7 is created to draw a better insight in that case. 
 
+<img src="/images/Picture 1.png" alt="Picture 1"
+ title="Picture 1" width="500" />
 
 
 It could be found that, when k<7, the more shared connections 2 nodes had, the more likely that 2 nodes would connect; and the probability for 2 nodes to connect in week 1 is much higher than the probability in the following week. However, the difference of probability of connecting in week 2, 3 and 4 are not obvious. It is worth noticing that the probability for 2 nodes to connect when they have 6 shared nodes are higher in week 4 than week 3. 
+
+<img src="/images/Picture 2.png" alt="Picture 2"
+ title="Picture 2" width="500" />
 
 
 In conclusion, the probability for 2 nodes to connect is positively correlated to the number of shared nodes in general when k<7. It is more likely for 2 nodes with same number of shared nodes to connect in week 1, followed by week 2, 3 and 4. In short, it is more likely for two users to connect through the information exchange network if they have more previous connections built through the same type of activity. In the case when k is larger than 8, a more robust dataset and analyses are required to identify patterns. 
