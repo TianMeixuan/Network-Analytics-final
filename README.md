@@ -46,7 +46,7 @@ In-community ties ratio of a community = in-community ties of a community / in-c
 To illustrate the proposed algorithm, we detect the community of a network where green nodes form community 1, blue nodes form community 2 and orange nodes form community 3. The five green ties are in-community ties for community 1. And the four red ties are out-community for community 1. The black dotted line link orange node and blue node, therefore is not related to community 1. The ratio of in-community tie in community 1 is therefore 5/9. 
 
 # Key Insights
-# Kossinets & Watts Model  - the relationship between probability to connect and number of shared nodes
+## Kossinets & Watts Model  - the relationship between probability to connect and number of shared nodes
 
 Although the maximum number of shared nodes between two nodes in the data set is 23, it seems like there is a knot in the distribution around k = 14. Therefore, we used k=14 as the cutoff point and visualized the probability to connect and number of shared nodes. According to figure (1), it is much more likely for 2 nodes to connect in week 1 compared with the following weeks when the number of shared nodes is the same. The probability for 2 nodes with 8 and 10 shared nodes to connect in week 1 is 100%, however, the credibility of the data may be restrained by the size of the analyses. For week 2 and onwards, despite that there is a higher probability for 2 nodes to connect in week 2 up to week 10, the differences in probability of connection are not obvious. It could also be noticed that when k>=7, no obvious pattern between probability to connect and number of shared nodes can be found, therefore, another plot focusing on k<7 is created to draw a better insight in that case. 
 
