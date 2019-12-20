@@ -2,9 +2,9 @@
 Original data is saved in Data folder
 
 3 Jupyter Notebooks:
-- Data cleaning process
-- Kossinets & Watts Model
-- Community detection
+- Data_clean.ipynb: Data cleaning process
+- Kossinets&Watts.ipynb: Kossinets & Watts Model
+- Community.ipynb: Community detection, algorithms and analyses
 
 In order to run the code in Community detection, please install cdlib using 'pip install cdlib'
 
