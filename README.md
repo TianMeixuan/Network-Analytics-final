@@ -42,3 +42,35 @@ In-community ties ratio of a community = in-community ties of a community / in-c
 
 <img src="/images/IMG_0220.jpg" alt="IMG_0220"
  title="IMG_0220" width="450" />
+
+To illustrate the proposed algorithm, we detect the community of a network where green nodes form community 1, blue nodes form community 2 and orange nodes form community 3. The five green ties are in-community ties for community 1. And the four red ties are out-community for community 1. The black dotted line link orange node and blue node, therefore is not related to community 1. The ratio of in-community tie in community 1 is therefore 5/9. 
+
+# Key Insights
+# Kossinets & Watts Model  - the relationship between probability to connect and number of shared nodes
+
+Although the maximum number of shared nodes between two nodes in the data set is 23, it seems like there is a knot in the distribution around k = 14. Therefore, we used k=14 as the cutoff point and visualized the probability to connect and number of shared nodes. According to figure (1), it is much more likely for 2 nodes to connect in week 1 compared with the following weeks when the number of shared nodes is the same. The probability for 2 nodes with 8 and 10 shared nodes to connect in week 1 is 100%, however, the credibility of the data may be restrained by the size of the analyses. For week 2 and onwards, despite that there is a higher probability for 2 nodes to connect in week 2 up to week 10, the differences in probability of connection are not obvious. It could also be noticed that when k>=7, no obvious pattern between probability to connect and number of shared nodes can be found, therefore, another plot focusing on k<7 is created to draw a better insight in that case. 
+
+
+
+It could be found that, when k<7, the more shared connections 2 nodes had, the more likely that 2 nodes would connect; and the probability for 2 nodes to connect in week 1 is much higher than the probability in the following week. However, the difference of probability of connecting in week 2, 3 and 4 are not obvious. It is worth noticing that the probability for 2 nodes to connect when they have 6 shared nodes are higher in week 4 than week 3. 
+
+
+In conclusion, the probability for 2 nodes to connect is positively correlated to the number of shared nodes in general when k<7. It is more likely for 2 nodes with same number of shared nodes to connect in week 1, followed by week 2, 3 and 4. In short, it is more likely for two users to connect through the information exchange network if they have more previous connections built through the same type of activity. In the case when k is larger than 8, a more robust dataset and analyses are required to identify patterns. 
+
+
+## Community
+<img src="/images/community.png" alt="community"
+ title="community" width="450" />
+ 
+ After determining the community of each individual user and calculating the edge density of each community, we plotted 2 graphs to illustrate:
+ 
+1. The relationship between edge density of the community and ratio of  in-community ties 
+2. The relationship between edge community size and ratio of in-community ties
+
+In addition, Annotation of community size is added to the left plot in order to build comparison against the plot on the right. 
+
+A negative correlation between edge density and ratio of in-community ties could be found when edge density is higher than 0.02. However, the correlation between the ratio of in-community ties and edge density is not obvious when edge density is lower than 0.02. Therefore, it could be concluded that in the first 4 weeks of StackOverflow, user in a community with higher density are more likely to connect with other users from different communities through the information exchange network. Meanwhile, users from a community with less density are more likely to connect with users from the same community. 
+
+The plot on the right shows a positive correlation between the size of community and the ratio of in-community ties. It could be found that communities with more members tend to have higher ratio of in-community ties. It could be interpreted that users from a community with more members are more likely to connect with other users from the same community. 
+
+In conclusion, users from a community with more members and less density are more likely to connect with someone from the same community through the information exchange network of StackOverflow. As the data only covers the first 4 weeks of StackOverflow, it is reasonable to suspect that the questions and answers posted in StackOverflow are still limited. Users from a more densely connected community with relatively smaller number of members are more likely to explore outside its community and connect with users from other communities, as the resources (questions and answers) for their community may not be sufficient enough. In contrast, users from a less densely connected community with relatively higher number of members are more likely to connect with someone from the same community, as the community have relatively more resources (questions and answers). 
