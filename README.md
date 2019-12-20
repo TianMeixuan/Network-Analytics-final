@@ -41,4 +41,4 @@ Out-community ties: we deem a tie as out-community tie if users (source node and
 In-community ties ratio of a community = in-community ties of a community / in-community ties of a community + out-community ties of a community
 
 <img src="/images/IMG_0220.jpg" alt="IMG_0220"
- title="IMG_0220" width="300" />
+ title="IMG_0220" width="450" />
