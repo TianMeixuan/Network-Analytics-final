@@ -1,5 +1,6 @@
 # File Specification
 Original data is saved in Data folder
+
 3 Jupyter Notebook:
 - Data cleaning process
 - Kossinets & Watts Model
