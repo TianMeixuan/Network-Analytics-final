@@ -20,7 +20,7 @@ We applied the Kossinets & Watts Model to the A2Q data to understand the probabi
 ## Community Detection and Analyses
 We want to use the community detection to understand the community formation in the first 4 weeks and get an insight of how different users from different communities with different sizes and edge densities build connections in the information exchange network. In order to gain a big picture about the information detection community in the 4 week, we deem an undirected tie between the two nodes if one answered question posted by another. Again, as the information exchange network is hard to measure,  we assume that only one tie can emerge between two users no matter how many times they exchange information. To illustrate, if A answered B’s question in week 1 and B answered A’s question 3 times in week 3, we assume there is only one tie between A and B. Duplications are removed from the original dataset and only unique ties are considered for community detection and further analyses. We also used function(.to_undirected()) in Networkx to make sure the network is undirected before use the network for community detection and further analyses.
 
-Louvain algorithm is chosen for detecting communities, which are non-overlapping. Louvain method is an algorithm of community detection to optimize modularity, which is a value that measures the density of edges inside communities to edges outside communities. Networks with higher modularity would have denser connections between the nodes within the community than that in different communities.
+Louvain algorithm is chosen for detecting communities, which detects non-overlapping communities. Louvain method is an algorithm of community detection to optimize modularity, which is a value that measures the density of edges inside communities to edges outside communities. Networks with higher modularity would have denser connections between the nodes within the community than that in different communities.
 
 Reasons underlying the algorithm choice:
 - The Louvain method is a simple method for detecting communities and we can implement it easily in Networkx and CDLIB packages in python. For detecting the StackOverflow communities in the first 4 weeks, we use Louvain algorithm in CDLIB packages, and its code and call is available at Github (Rossetti, 2019).
@@ -44,7 +44,7 @@ After community detection, we then analysed whether and how much the ties formed
 <img src="/images/IMG_0220.jpg" alt="IMG_0220"
  title="IMG_0220" width="450" />
 
-To illustrate the proposed algorithm, we detect the community of a network where green nodes form community 1, blue nodes form community 2 and orange nodes form community 3. The five green ties are in-community ties for community 1. And the four red ties are out-community for community 1. The black dotted line link orange node and blue node, therefore is not related to community 1. The ratio of in-community tie in community 1 is therefore 5/9. 
+To illustrate the proposed algorithm, we detect the community of a network where green nodes form community 1, blue nodes form community 2 and orange nodes form community 3. The five green ties are in-community ties for community 1. And the four red ties are out-community for community 1. The black dotted line link orange node and blue node, therefore it is not related to community 1. Therefore, he ratio of in-community tie in community 1 is 5/9. 
 
 # Key Insights
 ## Kossinets & Watts Model  - the relationship between probability to connect and number of shared nodes
@@ -70,10 +70,10 @@ In conclusion, the probability for 2 nodes to connect is positively correlated t
  
 After determining the community of each individual user and calculating the edge density of each community, we plotted 2 graphs to illustrate:
  
-1. The relationship between edge density of the community and ratio of  in-community ties 
+1. The relationship between edge density of the community and ratio of in-community ties 
 2. The relationship between edge community size and ratio of in-community ties
 
-In addition, Annotation of community size is added to the left plot in order to build comparison against the plot on the right. 
+In addition, annotation of community size is added to the left plot in order to build comparison against the plot on the right. 
 
 A negative correlation between edge density and ratio of in-community ties could be found when edge density is higher than 0.02. However, the correlation between the ratio of in-community ties and edge density is not obvious when edge density is lower than 0.02. Therefore, it could be concluded that in the first 4 weeks of StackOverflow, user in a community with higher density are more likely to connect with other users from different communities through the information exchange network. Meanwhile, users from a community with less density are more likely to connect with users from the same community. 
 
